@@ -75,7 +75,7 @@ fn efi_main(_handle: Handle, system_table: SystemTable<Boot>) -> Status {
     let mut surface = Surface::create(gop_proto);
 
     let mut x = (surface.dims().0/2,surface.dims().1/2);
-    let mut dx  = (1isize,1isize);
+    let mut dx  = (2isize,2isize);
 
     loop {
         surface.clear();
@@ -91,7 +91,7 @@ fn efi_main(_handle: Handle, system_table: SystemTable<Boot>) -> Status {
         }
 
         x.0 = (x.0 as isize + dx.0) as usize;
-        x.1 = (x.1 as isize + dx.0) as usize;
+        x.1 = (x.1 as isize + dx.1) as usize;
 
     }
 
