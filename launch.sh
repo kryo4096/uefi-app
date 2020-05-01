@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p qemu-resources/disk/EFI/BOOT
+
 cargo xbuild  --target x86_64-unknown-uefi &&\
 cp target/x86_64-unknown-uefi/debug/uefi-app.efi qemu-resources/disk/EFI/BOOT/bootx64.efi &&\
 qemu-system-x86_64 -nodefaults\
