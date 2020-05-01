@@ -10,5 +10,3 @@ qemu-system-x86_64 -nodefaults\
   -drive format=raw,file=fat:rw:qemu-resources/disk\
   -vga std\
   -display gtk
-
-clear
